@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opal Oaks Realty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="opal-oaks-logo.png" alt="Opal Oaks Realty Logo" class="logo">
+        <h1>Introducing Opal Oaks Realty</h1>
+        <p>Find your dream home today!</p>
+    </header>
+    <section class="filter">
+        <h2>Filter Properties</h2>
+        <button id="toggleBtn" onclick="toggleProperties()">Show For Rent</button>
+        <form id="priceFilterForm">
+            <label for="search">Search:</label>
+            <input type="text" id="search" placeholder="Search properties...">
+            <span id="searchError" class="error"></span>
+            <label for="maxPrice">Max Price ($):</label>
+            <input type="number" id="maxPrice" placeholder="Enter max price" min="0">
+            <span id="priceError" class="error"></span>
+            <label for="minBedrooms">Min Bedrooms:</label>
+            <select id="minBedrooms">
+                <option value="">Select bedrooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+            </select>
+            <span id="bedroomsError" class="error"></span>
+            <label for="location">Location:</label>
+            <select id="location">
+                <option value="">Select location</option>
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Miami">Miami</option>
+            </select>
+            <span id="locationError" class="error"></span>
+            <button type="submit">Filter</button>
+            <button type="button" onclick="resetFilter()">Reset</button>
+        </form>
+    </section>
+    <section class="properties">
+        <h2>Featured Properties</h2>
+        <div class="property-card" data-type="sale" data-price="350000" data-bedrooms="3" data-location="New York">
+            <img src="https://via.placeholder.com/300x200" alt="Property 1">
+            <h3>Cozy Family Home</h3>
+            <p>$350,000 | 3 Beds | 2 Baths | For Sale | New York | Spacious suburban house</p>
+        </div>
+        <div class="property-card" data-type="rent" data-price="1500" data-bedrooms="2" data-location="Los Angeles">
+            <img src="https://via.placeholder.com/300x200" alt="Property 2">
+            <h3>Modern Apartment</h3>
+            <p>$1,500/month | 2 Beds | 1 Bath | For Rent | Los Angeles | Sleek urban living</p>
+        </div>
+        <div class="property-card" data-type="sale" data-price="500000" data-bedrooms="4" data-location="Chicago">
+            <img src="https://via.placeholder.com/300x200" alt="Property 3">
+            <h3>Luxury Villa</h3>
+            <p>$500,000 | 4 Beds | 3 Baths | For Sale | Chicago | Elegant lakeside retreat</p>
+        </div>
+        <div class="property-card" data-type="rent" data-price="2000" data-bedrooms="1" data-location="Miami">
+            <img src="https://via.placeholder.com/300x200" alt="Property 4">
+            <h3>City Loft</h3>
+            <p>$2,000/month | 1 Bed | 1 Bath | For Rent | Miami | Trendy downtown studio</p>
+        </div>
+    </section>
+    <footer>
+        <p>Contact us: info@opaloaksrealty.com | (123) 456-7890</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
